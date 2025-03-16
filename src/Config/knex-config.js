@@ -1,11 +1,14 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 module.exports = {
   development: {
     client: "mysql2",
     connection: {
       host: "localhost",
-      database: "authentication",
+      database: process.env.NAME_DB,
       user: "root",
-      password: "29062003",
+      password: process.env.PASSWORDD_DB,
     },
   },
 };
